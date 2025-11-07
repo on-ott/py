@@ -28,5 +28,42 @@
   <footer>
     <p>© MOD Sky / PowerTech Digital — All Rights Reserved</p>
   </footer>
+
+  <script>
+  // 禁止右键
+  document.addEventListener('contextmenu', e => e.preventDefault());
+
+  // 禁止复制、剪切、粘贴
+  document.addEventListener('copy', e => e.preventDefault());
+  document.addEventListener('cut', e => e.preventDefault());
+  document.addEventListener('paste', e => e.preventDefault());
+
+  // 禁止常用快捷键，包括 Ctrl+C/X/A/S/P/U
+  document.addEventListener('keydown', function(e){
+    if (e.ctrlKey) {
+      const forbidden = ['c','x','a','s','p','u'];
+      if (forbidden.includes(e.key.toLowerCase())){
+        e.preventDefault();
+        alert("此操作已被禁止！");
+      }
+    }
+
+    // 禁止 F12 开发者工具
+    if (e.key === 'F12') {
+      e.preventDefault();
+      alert("此操作已被禁止！");
+    }
+
+    // 禁止 Ctrl+Shift+I / Ctrl+Shift+J / Ctrl+Shift+C
+    if (e.ctrlKey && e.shiftKey) {
+      const forbiddenShift = ['i','j','c'];
+      if (forbiddenShift.includes(e.key.toLowerCase())){
+        e.preventDefault();
+        alert("此操作已被禁止！");
+      }
+    }
+  });
+</script>
+
 </body>
 </html>
