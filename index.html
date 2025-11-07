@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OTT</title>
+  <link rel="stylesheet" href="style.css">
+      <style>
+    /* 禁止文本选中 */
+    body {
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🚫 非授权播放器 / Unauthorized Player</h1>
+    
+  <h2>请使用以下任一播放器访问此服务：OTT Navigator、OTT Player 或 OTT TV</h2>
+
+ <h2>Please use one of the following players to access this playlist: OTT Navigator, OTT Player, or OTT TV</h2>
+
+ <p>🌐 1 iD 1 Decive 💯 BELI DI MOD Sky / PowerTech Shop TO Shopee🇲🇾 (24-Hour Auto Update ip)(Stable Server ip)🌐 MOD Sky / PowerTech Shop🇲🇾.</p>
+
+  </header>
+
+  <section>
+    <article>
+      <h2><a href="article1.html">Playlist</a></h2>
+      <p>MOD Sky / PowerTech Shop TO Shopee</p>
+    </article>
+  </section>
+
+  <footer>
+    <p>© MOD Sky / PowerTech Digital — All Rights Reserved</p>
+  </footer>
+
+<script>
+  // 禁止右键
+  document.addEventListener('contextmenu', e => e.preventDefault());
+
+  // 禁止复制、剪切、粘贴
+  document.addEventListener('copy', e => e.preventDefault());
+  document.addEventListener('cut', e => e.preventDefault());
+  document.addEventListener('paste', e => e.preventDefault());
+
+  // 禁止常用快捷键，包括 Ctrl+C/X/A/S/P/U
+  document.addEventListener('keydown', function(e){
+    if (e.ctrlKey) {
+      const forbidden = ['c','x','a','s','p','u'];
+      if (forbidden.includes(e.key.toLowerCase())){
+        e.preventDefault();
+        alert("🚫 非授权播放器 / Unauthorized Player");
+      }
+    }
+
+    // 禁止 F12 开发者工具
+    if (e.key === 'F12') {
+      e.preventDefault();
+      alert("🚫 非授权播放器 / Unauthorized Player");
+    }
+
+    // 禁止 Ctrl+Shift+I / Ctrl+Shift+J / Ctrl+Shift+C
+    if (e.ctrlKey && e.shiftKey) {
+      const forbiddenShift = ['i','j','c'];
+      if (forbiddenShift.includes(e.key.toLowerCase())){
+        e.preventDefault();
+        alert("🚫 非授权播放器 / Unauthorized Player");
+      }
+    }
+  });
+</script>
+<script>
+  document.querySelectorAll('.article-summary').forEach(el => {
+    let text = el.textContent.trim();
+    if (text.length > 10) {
+      el.textContent = text.slice(0, 10) + '…';
+    }
+  });
+</script>
+
+
+
+</body>
+</html>
