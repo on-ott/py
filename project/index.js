@@ -6,7 +6,7 @@ export default {
       return new Response("403 Forbidden - OTT Only", { status: 403 });
     }
 
-    const target = "https://yourusername.github.io"; // 源站地址
+    const target = "https://on-ott.github.io/py/public/article1.html"; // 源站地址
     const url = new URL(request.url);
     const newUrl = target + url.pathname + url.search;
 
