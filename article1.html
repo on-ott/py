@@ -6,6 +6,16 @@
   <title>Ott</title>
   <link rel="stylesheet" href="style.css">
     <style>
+    /* 可视化只显示前 50 字 */
+    .article-content {
+      display: inline-block;
+      max-width: 50ch; /* 约50个字符宽度 */
+      white-space: nowrap;  /* 不换行，超出显示省略号 */
+      overflow: hidden;     /* 超出隐藏 */
+      text-overflow: ellipsis; /* 显示省略号 */
+    }
+  </style>
+    <style>
     /* 禁止文本选中 */
     body {
       user-select: none;
