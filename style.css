@@ -1,4 +1,6 @@
-/* 全局样式 */
+/* ===========================
+   全局样式
+=========================== */
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   max-width: 800px;
@@ -7,15 +9,6 @@ body {
   line-height: 1.8;
   background: #fafafa;
   color: #333;
-  user-select: none;  /* 禁止选中文本 */
-}
-
-.article-content {
-  display: inline-block;
-  max-width: 50ch;      /* 大约显示50个字符 */
-  white-space: nowrap;   /* 不换行 */
-  overflow: hidden;      /* 超出隐藏 */
-  text-overflow: ellipsis; /* 超出显示省略号 */
 }
 
 header {
@@ -42,4 +35,43 @@ footer {
   margin-top: 2rem;
   color: #666;
   font-size: 0.9em;
+}
+
+/* ===========================
+   文章列表 & 文章详情
+=========================== */
+article {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+/* 首页文章摘要或详情页视觉上限制50字 */
+.article-summary,
+.article-content {
+  display: inline-block;
+  max-width: 50ch;       /* 约50个字符宽度 */
+  white-space: nowrap;    /* 不换行 */
+  overflow: hidden;       /* 超出隐藏 */
+  text-overflow: ellipsis; /* 超出显示省略号 */
+}
+
+/* 如果想换行显示前50字符的多行版本，可用下面注释替换上面
+.article-summary,
+.article-content {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;  /!* 根据行高控制大约50字 *!/
+  overflow: hidden;
+}
+*/
+
+/* 可选：文章链接样式 */
+article h2 a {
+  color: #0078d4;
+  text-decoration: none;
+}
+
+article h2 a:hover {
+  text-decoration: underline;
 }
