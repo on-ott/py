@@ -62,6 +62,12 @@
         alert("🚫 非授权播放器 / Unauthorized Player");
       }
     }
+  }
+      document.querySelectorAll('.article-summary').forEach(el => {
+    let text = el.textContent;
+    if (text.length > 50) {
+      el.textContent = text.slice(0, 50) + '…';
+    }
   });
 </script>
 
