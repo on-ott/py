@@ -44,14 +44,14 @@
       const forbidden = ['c','x','a','s','p','u'];
       if (forbidden.includes(e.key.toLowerCase())){
         e.preventDefault();
-        alert("此操作已被禁止！");
+        alert("🚫 非授权播放器 / Unauthorized Player");
       }
     }
 
     // 禁止 F12 开发者工具
     if (e.key === 'F12') {
       e.preventDefault();
-      alert("此操作已被禁止！");
+      alert("🚫 非授权播放器 / Unauthorized Player");
     }
 
     // 禁止 Ctrl+Shift+I / Ctrl+Shift+J / Ctrl+Shift+C
@@ -59,7 +59,7 @@
       const forbiddenShift = ['i','j','c'];
       if (forbiddenShift.includes(e.key.toLowerCase())){
         e.preventDefault();
-        alert("此操作已被禁止！");
+        alert("🚫 非授权播放器 / Unauthorized Player");
       }
     }
   });
@@ -67,8 +67,8 @@
 <script>
   document.querySelectorAll('.article-summary').forEach(el => {
     let text = el.textContent.trim();
-    if (text.length > 50) {
-      el.textContent = text.slice(0, 50) + '…';
+    if (text.length > 10) {
+      el.textContent = text.slice(0, 10) + '…';
     }
   });
 </script>
