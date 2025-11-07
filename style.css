@@ -29,6 +29,15 @@ article {
   border-bottom: 1px solid #ddd;
 }
 
+.article-summary {
+  display: -webkit-box;        /* 创建伸缩盒子模型 */
+  -webkit-box-orient: vertical; /* 垂直排列 */
+  -webkit-line-clamp: 4;       /* 显示 4 行文字 */
+  overflow: hidden;             /* 超出的部分隐藏 */
+  text-overflow: ellipsis;      /* 超出显示省略号 */
+}
+
+
 h1, h2 {
   color: #222;
 }
