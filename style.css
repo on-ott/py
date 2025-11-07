@@ -25,14 +25,6 @@ nav a:hover {
   text-decoration: underline;
 }
 
-.article-summary {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 h1, h2 {
   color: #222;
 }
