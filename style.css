@@ -1,3 +1,4 @@
+/* 全局样式 */
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   max-width: 800px;
@@ -6,6 +7,7 @@ body {
   line-height: 1.8;
   background: #fafafa;
   color: #333;
+  user-select: none;  /* 禁止选中文本 */
 }
 
 header {
@@ -30,13 +32,12 @@ article {
 }
 
 .article-summary {
-  display: -webkit-box;        /* 创建伸缩盒子模型 */
-  -webkit-box-orient: vertical; /* 垂直排列 */
-  -webkit-line-clamp: 4;       /* 显示 4 行文字 */
-  overflow: hidden;             /* 超出的部分隐藏 */
-  text-overflow: ellipsis;      /* 超出显示省略号 */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-
 
 h1, h2 {
   color: #222;
