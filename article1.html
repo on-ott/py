@@ -1717,12 +1717,13 @@ https://rakuten-actionmovies-1-gb.samsung.wurl.tv/3000.m3u8
 </script>
 <script>
   document.querySelectorAll('.article-summary').forEach(el => {
-    let text = el.textContent;
+    let text = el.textContent.trim();
     if (text.length > 50) {
       el.textContent = text.slice(0, 50) + '…';
     }
   });
 </script>
+
 
 </body>
 </html>
