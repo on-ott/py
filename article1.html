@@ -1680,25 +1680,49 @@ https://rakuten-actionmovies-1-gb.samsung.wurl.tv/3000.m3u8
     <p>© MOD Sky / PowerTech Digital — All Rights Reserved</p>
   </footer>
 
-    <script>
-    // 禁止右键
-    document.addEventListener('contextmenu', event => event.preventDefault());
+<script>
+  // 禁止右键
+  document.addEventListener('contextmenu', e => e.preventDefault());
 
-    // 禁止复制、剪切、粘贴
-    document.addEventListener('copy', event => event.preventDefault());
-    document.addEventListener('cut', event => event.preventDefault());
-    document.addEventListener('paste', event => event.preventDefault());
+  // 禁止复制、剪切、粘贴
+  document.addEventListener('copy', e => e.preventDefault());
+  document.addEventListener('cut', e => e.preventDefault());
+  document.addEventListener('paste', e => e.preventDefault());
 
-    // 禁止快捷键 Ctrl+C, Ctrl+X, Ctrl+A, Ctrl+S, Ctrl+P
-    document.addEventListener('keydown', function(event) {
-      if (event.ctrlKey) {
-        let forbiddenKeys = ['c', 'x', 'a', 's', 'p'];
-        if (forbiddenKeys.includes(event.key.toLowerCase())) {
-          event.preventDefault();
-          alert("此操作已被禁止！");
-        }
+  // 禁止常用快捷键，包括 Ctrl+C/X/A/S/P/U
+  document.addEventListener('keydown', function(e){
+    if (e.ctrlKey) {
+      const forbidden = ['c','x','a','s','p','u'];
+      if (forbidden.includes(e.key.toLowerCase())){
+        e.preventDefault();
+        alert("此操作已被禁止！");
       }
-    });
-  </script>
+    }
+
+    // 禁止 F12 开发者工具
+    if (e.key === 'F12') {
+      e.preventDefault();
+      alert("此操作已被禁止！");
+    }
+
+    // 禁止 Ctrl+Shift+I / Ctrl+Shift+J / Ctrl+Shift+C
+    if (e.ctrlKey && e.shiftKey) {
+      const forbiddenShift = ['i','j','c'];
+      if (forbiddenShift.includes(e.key.toLowerCase())){
+        e.preventDefault();
+        alert("此操作已被禁止！");
+      }
+    }
+  });
+</script>
+<script>
+  document.querySelectorAll('.article-summary').forEach(el => {
+    let text = el.textContent;
+    if (text.length > 50) {
+      el.textContent = text.slice(0, 50) + '…';
+    }
+  });
+</script>
+
 </body>
 </html>
