@@ -5,7 +5,7 @@ const port = 3000;
 
 // 允许的 User-Agent 关键字
 const allowedAgents = [
-  'MyOTTPlayer', // 替换成你的OTT Player User-Agent
+  'OTT Player', // 替换成你的OTT Player User-Agent
 ];
 
 // 中间件：只允许OTT Player访问
